@@ -1,4 +1,7 @@
 import React from "react";
+import Carousel from "../Carousel";
+import Data from "../Data";
+import DataMobile from "../Data/mobile";
 
 // CSS
 import "./style.css";
@@ -8,12 +11,12 @@ function Hero(props) {
     <div className="col-12 hero-container">
       <div
         style={{
-          backgroundImage: `linear-gradient(180deg, rgba(33, 150, 243, 0.5) 0%, rgba(33, 150, 243, 0.15) 73.26%), url(${props.background})`,
+          backgroundImage: `linear-gradient(rgba(33, 150, 243, 0.5) 0%, rgba(33, 150, 243, 0.15) 73.26%), url(${props.background})`,
         }}
         className="hero-background col-12"
       ></div>
       <div className="col-12 hero">
-        <div className="content-container">
+        <div className="content-container mb-3">
           <div
             className="col-xs-12 col-sm-7 col-md-6 col-lg-8 left-side text-light"
             data-page={props.appName}
@@ -27,7 +30,9 @@ function Hero(props) {
                   <h5>{props.deskripsi}</h5>
                 </div>
                 <div className="mb-2 title">
-                  <h1>{props.title}</h1>
+                  <h1>
+                    {props.title1}&nbsp;{props.title2}{" "}
+                  </h1>
                 </div>
               </div>
               <div className="slogan">
@@ -40,19 +45,26 @@ function Hero(props) {
             data-page={props.appName}
           >
             <div className="logo-title mt-5 mb-2">
-              <div className="d-flex justify-content-center w-100 mb-5">
-                <div className="logo d-flex justify-content-center col-4">
+              <div className="d-flex justify-content-center mb-5">
+                <div className="logo d-flex justify-content-center col-3">
                   <img src={props.logo} alt={props.appName} />
                 </div>
                 <div className="d-flex align-items-center deskripsi">
-                  <h4>
-                    <b>SMA DIY Blended Learning</b>
-                  </h4>
+                  <h2>
+                    <b>
+                      {props.title1} <br /> {props.title2}{" "}
+                    </b>
+                  </h2>
                 </div>
               </div>
             </div>
             {props.children}
           </div>
+        </div>
+        <div className="data-container mb-5">
+          <Data />
+          <DataMobile />
+          <Carousel />
         </div>
       </div>
     </div>

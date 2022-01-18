@@ -1,0 +1,14 @@
+ /* ERROR 404 */
+ .error-notfound img {
+     height: 300px;
+     width: 300px;
+ }
+ 
+ .error-notfound button {
+     transition: background-color 0.5s, color 0.5s;
+ }
+ 
+ .error-notfound button:hover {
+     background-color: #1685DE;
+     color: #fff;
+ }

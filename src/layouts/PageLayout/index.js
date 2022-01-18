@@ -10,10 +10,11 @@ import logo from "../../assets/img/logo.png"; //Logo
 function pageLayout(props) {
   //EDITABLE
   const deskripsi = "Selamat datang kembali di";
-  const title = "SMA DIY Blended Learning";
+  const title1 = "DIY Blended Learning";
+  const title2 = "";
   const slogan =
     "Seperti Laskar pelangi, raihlah bintangmu dan lampaui batasanmu. Lihatlah lembar Ujianmu bukan sebagai beban hidupmu tapi sebagai peluang untuk menuju gerbang kesuksesanmu.";
-  const copyright = "2021 SMA DIY Blended Learning - Didukung oleh Geschool";
+  const copyright = "2021 DIY Blended Learning - Didukung oleh Geschool";
 
   return (
     <div>
@@ -22,7 +23,8 @@ function pageLayout(props) {
         logo={logo}
         background={background}
         deskripsi={deskripsi}
-        title={title}
+        title1={title1}
+        title2={title2}
         slogan={slogan}
         appName={props.appName}
       >
